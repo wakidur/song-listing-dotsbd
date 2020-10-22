@@ -1,0 +1,118 @@
+// Common Input With Outline
+.common-input-with-outline-contain {
+  .md-form {
+    @include dotsCommon-margin(0px, 0px, 0px, 0px);
+    // without border , with bg color
+    input.common-input-with-bg,
+    textarea.common-input-with-bg {
+      width: 100%;
+      background-color: #f1f2f5;
+      @include dotsCommon-margin(0px, 0px, 0px, 0px);
+      @include dotsCommon-boderRadius(10px, 10px, 10px, 10px);
+      @include dotsCommon-padding(16px, 20px, 16px, 20px);
+      @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, #f1f2f5);
+      @include dotsCommon-fontStyles(
+        20px,
+        $normal,
+        $normal,
+        $normal,
+        22px,
+        $normal,
+        $primaryColor
+      );
+
+      &.input-filled {
+        @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $primaryColor);
+        background-color: #ffffff;
+      }
+      &:focus {
+        @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $pinkPrimary);
+        background-color: #ffffff;
+        box-shadow: none !important;
+      }
+      &:focus + label {
+        color: $pinkPrimary !important;
+      }
+      &.is-invalid {
+        @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $primaryPink);
+        background-color: #ffffff;
+        background: none;
+        &:focus + label {
+          color: #3bcbff !important;
+        }
+      }
+    }
+
+    input.common-input-with-outline,
+    textarea.common-input-with-outline {
+      width: 100%;
+      background-color: $pureWhite;
+      @include dotsCommon-margin(0px, 0px, 0px, 0px);
+      @include dotsCommon-boderRadius(10px, 10px, 10px, 10px);
+      @include dotsCommon-padding(17px, 20px, 17px, 20px);
+      @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $ashColoold);
+      @include dotsCommon-fontStyles(
+        20px,
+        $normal,
+        $normal,
+        $normal,
+        22px,
+        $normal,
+        $ashColoold
+      );
+
+      &.input-filled {
+        @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $primaryColor);
+        background-color: #ffffff;
+      }
+      &:focus {
+        @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $pinkPrimary);
+        background-color: #ffffff;
+        box-shadow: none !important;
+      }
+      &:focus + label {
+        color: $pinkPrimary !important;
+      }
+      &.is-invalid {
+        @include dotsCommon-boder(1px, 1px, 1px, 1px, solid, $primaryPink);
+        background-color: #ffffff;
+        background: none;
+        &:focus + label {
+          color: #3bcbff !important;
+        }
+      }
+    }
+
+    label {
+      @include dotsCommon-fontStyles(
+        18px,
+        $normal,
+        $normal,
+        $normal,
+        23px,
+        $normal,
+        $ashColoold
+      );
+      @include dotsCommon-padding(6px, 0px, 0px, 20px);
+      &.active {
+        background-color: $pureWhite;
+        margin: 0.25rem 0.75rem;
+        @include dotsCommon-padding(0px, 0.5rem, 0px, 0.5rem);
+        color: $pinkPrimary !important;
+        color: $primaryColor !important;
+      }
+    }
+  }
+  .error {
+    @include dotsCommon-fontStyles(
+      14px,
+      $normal,
+      $normal,
+      $normal,
+      16px,
+      $normal,
+      $primaryPink
+    );
+    @include dotsCommon-margin(0px, 0px, 0px, 0px);
+  }
+}
